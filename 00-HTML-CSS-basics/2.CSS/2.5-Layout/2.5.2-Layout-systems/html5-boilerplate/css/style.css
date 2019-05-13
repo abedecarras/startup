@@ -2,26 +2,31 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
   }
+
 
 .container {
 margin: 0 auto;
 /* max-width: 48rem; */
-width: 90%;
+width: 100%;
 }
 
-.left {
+/* .left {
     float: left;
-}
+} */
 
  .column {
-    float: left;
+    /* float: left; */
     padding-left: 1rem;
     padding-right: 1rem;
-    border: 2px #000 solid;
+    /* border: 2px #000 solid; */
+    position: relative;
+    float: left;
 }
     
-.column.third { width: 33.3%; }
+/* .column.third { width: 33.3%; } */
     
 .clearfix:before,
 .clearfix:after {
@@ -37,6 +42,11 @@ width: 90%;
   *zoom: 1;
 }
 
+.float {
+  float: left;
+  width: 33%;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -46,17 +56,17 @@ img {
     margin-top: 1rem;
 }
 
-/* .box:hover {
+.box:hover {
     opacity: 1;
-} */
+}
 
 .box {
     background-color: rgba(0,0,0,0.5);
-    left: 0;
-    top: 0;
+    left: 16px;
+    top: 16px;
     border-radius: 0;
-    height: 100%;
-    width: 100%;
+    height: 92%;
+    width: 90%;
     position: absolute;
     opacity: 0;
     z-index: 1000;
@@ -71,15 +81,32 @@ p {
     float: left;
 }
 
-.title {
-    width: 30%;
-}
-
-.paragraph {
-    width: 70%;
-}
-
 .grid {
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text {
+  float: left;
+  padding: 2rem 3rem;
+}
+
+.min {
+  width: 30%;
+}
+
+.max {
+  width: 70%;
+}
+
+.title {
+  top: 23px;
+  left: 30px;
+  position: relative;
+  color: #fff;
+  font-weight: bold;
 }
