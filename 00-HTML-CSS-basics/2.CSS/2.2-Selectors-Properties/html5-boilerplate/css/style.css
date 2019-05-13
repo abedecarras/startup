@@ -1,0 +1,144 @@
+
+* {  /*global font definition - Exercise 2*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: #333;
+}
+
+header, footer, nav, aside, article, section {
+    background-color: #666;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    /* font-family: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier; */
+    font-size: 24px;
+    text-align: center;
+}
+
+header, footer {
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav, aside, section {
+    height: 349px;
+    padding-top: 10px;
+    float: left;
+    width: 30%;
+}
+
+header, nav, section, aside, footer, article {
+    margin: 0 1.5% 10px 1.5%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+/* inner divs of section */
+.inner {
+    background-color: #999;
+    display: flex;
+}
+
+.center-div {
+    height: 300px;
+}
+
+.large {
+    height: 190px;
+}
+
+.inner.slim, .inner.large {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* body {
+    background-color: #333;
+}
+
+div {
+    background-color: #666;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    font: 24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    padding: 24px 15px;
+    text-align: center;
+}
+
+header, nav, section, aside, footer, article {
+    margin: 0 1.5% 10px 1.5%;
+}
+
+nav, section, aside {
+    float: left;
+    width: 30%;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+inner divs of section
+.inner {
+    background-color: #999;
+    display: flex;
+}
+
+.center-div {
+    height: 300px;
+}
+
+.large {
+    height: 100px;
+}
+
+.slim {
+    height: 5px;
+}
+
+.inner.slim, .inner.large { 
+    justify-content: center;
+    align-items: center;
+} */
+
+/* background */
+
+.bg-header {
+    background: #27FFB0;
+}
+
+.bg-football {
+    background: #75A3FF url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZh7maBUKfS6aNBDhxnsqyn78gwq0ZeFXDC2hcIqFC8o7YLQd0Eg) no-repeat center;
+    background-size: 100%;
+}
+
+.bg-ball {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIv0aB16kfan20fV6-bEpkxWDz7_l2MKn74y5DoiRZBJkINhDUmA)center;
+}
+
+.bg-landscape {
+    background: #fff url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJvEN8jBng74812KtbazIZDiWb4v6vjLs3mkirLxlN2ovItXuS3g)no-repeat center;
+    background-size: 100%;
+}
+
+

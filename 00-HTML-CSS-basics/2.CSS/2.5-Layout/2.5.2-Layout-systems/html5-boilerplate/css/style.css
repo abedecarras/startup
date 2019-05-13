@@ -1,0 +1,85 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.container {
+margin: 0 auto;
+/* max-width: 48rem; */
+width: 90%;
+}
+
+.left {
+    float: left;
+}
+
+ .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px #000 solid;
+}
+    
+.column.third { width: 33.3%; }
+    
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+    bottom: 0px;
+    float: left;
+    margin-top: 1rem;
+}
+
+/* .box:hover {
+    opacity: 1;
+} */
+
+.box {
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+p {
+    margin: 0 0 20px 0;
+    /* clear: left; */
+    /* width: 72%; */
+    float: left;
+}
+
+.title {
+    width: 30%;
+}
+
+.paragraph {
+    width: 70%;
+}
+
+.grid {
+    position: relative;
+    bottom: 0;
+}

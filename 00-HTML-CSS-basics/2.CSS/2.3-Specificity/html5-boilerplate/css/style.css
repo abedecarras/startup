@@ -1,0 +1,104 @@
+
+body {
+    background-color: #333;
+}
+
+header, footer, nav, aside, article, section {
+    background-color: #666;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    font-family: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    font-size: 24px;
+    /* padding: 24px 15px; */
+    text-align: center;
+}
+
+header, footer {
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav, aside, section {
+    height: 349px;
+    padding-top: 10px;
+    float: left;
+    width: 30%;
+}
+
+header, nav, section, aside, footer, article {
+    margin: 0 1.5% 10px 1.5%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+/* inner divs of section */
+.inner {
+    background-color: #999;
+    display: flex;
+}
+
+.center-div {
+    height: 300px;
+}
+
+.large {
+    height: 190px;
+}
+
+/* .slim {
+    height: 5px;
+} */
+
+.inner.slim, .inner.large {
+    justify-content: center;
+    align-items: center;
+}
+
+/*Specificity Exercise 2.*/
+
+.header {
+    font-size: 46px;
+}
+
+.footer {
+    font-size: 10px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.navigation {
+    font-size: 12px;
+}
+
+.sidebar {
+    font-size: 10px;
+}
+
+/*class that ends with r*/
+[class$=r] { 
+    background: magenta;
+}
+
+/* class that contains an a but do not finish with r*/
+[class*=a]:not([class$=r]):not(html):not(div) { 
+    background: blue;
+}/*is commented because html class=""*/
+
+* {
+    font-weight: bold;
+}

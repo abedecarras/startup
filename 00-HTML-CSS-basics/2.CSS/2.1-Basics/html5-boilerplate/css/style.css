@@ -1,0 +1,67 @@
+
+body {
+    background-color: #333;
+}
+
+header, footer, nav, aside, article, section {
+    background-color: #666;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    font-family: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    font-size: 24px;
+    /* padding: 24px 15px; */
+    text-align: center;
+}
+
+header, footer {
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav, aside, section {
+    height: 349px;
+    padding-top: 10px;
+    float: left;
+    width: 30%;
+}
+
+header, nav, section, aside, footer, article {
+    margin: 0 1.5% 10px 1.5%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+/* inner divs of section */
+.inner {
+    background-color: #999;
+    display: flex;
+}
+
+.center-div {
+    height: 300px;
+}
+
+.large {
+    height: 190px;
+}
+
+.inner.slim, .inner.large {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
