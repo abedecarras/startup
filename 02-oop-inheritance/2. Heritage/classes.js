@@ -12,15 +12,29 @@ class EventEmitter {
   }
 
   emit(eventName) {
-      console.log(eventName);        
+    const event = this.events[eventName];
+    if( event ) {
+      event.forEach(fn => {
+         fn.call(null);
+       });
+     }          
   }
 
   off(eventName, callback) {
-      console.log(eventName);
-      callback;
+    let listeners = this.events[eventName];
+
+    if (listeners) {
+        for (let i = listeners.length; i > 0; i--) {
+          if (listeners[i] == listener) {
+              listeners.splice(i, 1);
+              break;
+          }                            
+        }
+    }      
   }
 }
 
+// ------------------------------------------------------------------------------------------------
 class Movie extends EventEmitter {
 
     constructor(title, year, duration) {
@@ -31,15 +45,15 @@ class Movie extends EventEmitter {
     }
 
     play() {
-        console.log('playing!..');
+        this.emit('play');
     }
 
     pause() {
-        console.log('pause.');
+        this.emit('pause'); 
     }
 
     resume() {
-        console.log('resuming..');
+        this.emit('resume');
     }
 
     getInfo() {
@@ -51,21 +65,33 @@ let mov1 = new Movie('Terminator2', '1991', 137);
 let mov2 = new Movie('Troya', '2004', 163);
 let mov3 = new Movie('Batman: the dark night', '2008', 152);
 
-mov1.on('play', this.play());
+mov1.on('play', function() {
+    console.log(`The 'play' event has been emitted`);  
+});
 
-// class Actor {
+mov2.on('pause', function() {
+    console.log(`The 'pause' event has been emitted`);  
+});
 
-//     constructor(name, age) {
-//         this.name = name;
-//         this.age = age;
-//     }
-// }
+mov3.on('resume', function() {
+    console.log(`The 'resume' event has been emitted`);  
+});
 
+console.log(mov1);
+console.log(mov2);
+console.log(mov3);
 
+mov1.play();
+mov2.pause();
+mov3.resume();
 
-// let ev1 = new EventEmitter();
+// ----------------------------------------------------------------------------------------------------------
+class Actor {
 
-// ev1.on('click', function() {
-//      console.log('clicking');
-//     });
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
     

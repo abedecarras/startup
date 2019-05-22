@@ -34,26 +34,30 @@ class EventEmitter {
   }
 }
 
+const evEmitter = new EventEmitter();
+
+// ------------------------------------------------------------------------------------------------
 class Movie extends EventEmitter {
 
-    constructor(title, year, duration, cast) {
+    constructor(title, year, duration, cast, evEmitter) {
         super();
         this.title = title;
         this.year = year;
         this.duration = duration;
         this.cast = cast;
+        this.eventEm = evEmitter;
     }
 
     play() {
-        this.emit('play');
+        this.eventEm.emit('play');
     }
 
     pause() {
-        this.emit('pause');        
+        this.eventEm.emit('pause');        
     }
 
     resume() {
-        this.emit('resume');
+        this.eventEm.emit('resume');
     }
 
     getInfo() {
@@ -71,6 +75,7 @@ class Movie extends EventEmitter {
     }
 }
 
+// ----------------------------------------------------------------------------------------------------------
 class Actor {
 
     constructor(name, age) {
@@ -79,13 +84,9 @@ class Actor {
     }
 }
 
-let mov1 = new Movie('Terminator2', '1991', 137, []);
+let mov1 = new Movie('Terminator2', '1991', 137, [], evEmitter);
 let mov2 = new Movie('Troya', '2004', 163);
 let mov3 = new Movie('Batman: the dark night', '2008', 152);
-
-// mov1.on('play', function() {
-//     console.log(`The 'play' event has been emitted`);
-// });
 
 const arnold = new Actor('Arnold Schwarzenegger', 71);
 const actors = [
@@ -94,11 +95,10 @@ const actors = [
     new Actor('Linda Hamilton', 62)
 ]
 
-
-const evEmitter = new EventEmitter();
-
 class Logger {
-    constructor() {
+
+    constructor(evEmitter) {
+        this.evEm = evEmitter;
         evEmitter.on('play', () => {
             this.log('play event is playing..');
             
@@ -110,5 +110,9 @@ class Logger {
     }
 }
 
-const log = new Logger();
+
+const logger = new Logger(evEmitter);
+mov1.play();
+
+
     
