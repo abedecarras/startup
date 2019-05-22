@@ -1,0 +1,25 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-file src-compiled"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abedecarras/startup.git"
+  },
+  "author": "agustin bedecarras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abedecarras/startup/issues"
+  },
+  "homepage": "https://github.com/abedecarras/startup#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5"
+  }
+}
