@@ -1,0 +1,23 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+section {
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+ul {
+    float: right;
+}
+
+footer {
+    clear: both;
+}
