@@ -1,0 +1,8 @@
+export class Movie {
+  id?:number;
+  name: string;
+  year?: number;
+  duration?: string;
+}
+
+
