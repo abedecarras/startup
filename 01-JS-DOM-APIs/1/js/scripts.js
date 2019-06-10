@@ -1,6 +1,7 @@
-function fadeIn() {
-    setTimeout(function() {
-        document.getElementById('text').className = "hide";
-    }, 3000);
-}
 
+$(document).ready(function(){
+    console.log('document ready');
+
+    // $('section').fadeOut();
+    $('section').fadeIn();
+});
