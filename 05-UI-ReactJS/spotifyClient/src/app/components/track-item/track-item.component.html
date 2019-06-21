@@ -1,0 +1,19 @@
+<!-- <div >     -->
+    <li class="list-group-item"><a data-toggle="tooltip" data-placement="right" title="Play track" (click)="play()">{{trackItem.name}}</a> - {{trackItem.duration_ms}}
+        <span>
+          <button class="btn-star" id="tooltip" data-toggle="tooltip" data-placement="right" title="Add to Favorites" (click)="addToFavorites()">
+            <i class="fa fa-star star" id="star{{ index+1 }}" [ngClass]="setClasses()"></i>
+          </button>
+        </span>
+        <iframe [ngClass]="setDisplay()" 
+              id='track{{index}}'
+              [src]="trackItem.uri | safeDom"
+              width="320"
+              height="90"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+        ></iframe>
+    </li>
+<!-- </div> -->
+

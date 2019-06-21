@@ -1,0 +1,42 @@
+app-search-bar {
+    display: none;
+}
+
+app-search-bar#sb {
+    position: absolute;
+    top: 66px;
+    width: 92%;
+    z-index: 1;
+}
+
+i.fa.fa-search {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.show {
+    display: block;
+}
+
+.search {
+    position: relative;
+    right: 32px;
+}
+
+@media (min-width: 576px){
+    .search {
+        display: none;
+    }
+
+    app-search-bar#sb {
+        display: block;
+        position: relative;       
+        top: 0px;
+        width: 50%;
+        right: 4%;        
+    }
+
+    img.img-thumbnail.img-fluid.mx-auto {
+        margin-left: 0px!important;
+    }
+}

@@ -1,0 +1,80 @@
+<app-search-nav-bar></app-search-nav-bar>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6" >          
+          <div class="row no-gutters" >
+            <div class="col-md-4">
+              <img [src]="album.images | noImage" class="img-thumbnail img-circle" alt="album picture">                  
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ album.name }}</h5>                
+                <p class="card-text">{{ album.artists[0].name }} - {{ album.release_date.substring(0, 4) }}</p>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>      
+</div>
+
+<div class="m-4">
+    <a routerLink="/">Home</a> > <a routerLink="/artists">Artists</a> > <a routerLink="/artist/{{album.artists[0].id}}">{{ album.artists[0].name }}</a> > <a>{{ album.name }}</a>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-header">
+          {{ album.name }}
+          <button (click)="sort()">Sort by duration</button>
+        </div>
+        <app-track-item class="list-group list-group-flush" 
+        *ngFor="let item of tracks;let i=index" 
+        [trackItem]="item"
+        [index]="i"
+        [album]="album"
+        >         
+        </app-track-item>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-header">
+          {{ album.name }}
+        </div>
+        <ul class="list-group list-group-flush" >
+          <li class="list-group-item" *ngFor="let item of album.tracks.items;let i=index"> {{i+1}} - {{item.name}} 
+            <span>
+              <button class="btn-star" data-toggle="tooltip" data-placement="right" title="Add to Favorites" (click)="addToFavorites(i+1, item.id)">
+                <i class="fa fa-star star" id="star{{ i+1 }}" ></i>
+              </button>
+            </span>
+            <iframe
+              [src]="item.uri | safeDom"
+              width="320"
+              height="90"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </li>          
+        </ul>
+      </div>
+</div> -->

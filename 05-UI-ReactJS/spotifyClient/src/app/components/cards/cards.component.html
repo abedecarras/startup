@@ -1,0 +1,65 @@
+
+<div class="row">
+  <div (click)="goPage(item)" class="col-sm-6 mt-3" *ngFor="let item of items">
+   
+            <!-- card for savedTracks (api) -->
+            <!-- <div *ngIf="type == 'songs'" class="card border-danger">
+                <div class="row no-gutters" >
+                  <div class="col-md-4">
+                      <img [src]="item.track.album.images | noImage" class="card-img img-fluid" alt="album picture">                      
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ item.track.name }}</h5>
+                        <p class="card-text" *ngFor="let artist of item.track.artists">{{ artist.name }}</p>
+                        <p class="card-text"><small class="text-muted">{{ item.name }}</small></p>
+                      </div>
+                  </div>
+                </div>
+            </div> -->
+
+            <div *ngIf="type == 'songs'" class="card border-danger">
+              <div class="row no-gutters" >
+                <div class="col-md-4">
+                    <img [src]="item.albumImage | noImage" class="card-img img-fluid" alt="album picture">                      
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ item.name }}</h5>
+                      <p class="card-text" *ngFor="let artist of item.artists">Artist: {{ artist.name }}</p>
+                      <p class="card-text"><small class="text-muted">Album: {{ item.albumName }}</small></p>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+            <div *ngIf="type == 'artist'" class="card border-danger">
+                <div class="row no-gutters" >
+                  <div class="col-md-4">
+                      <img [src]="item.images | noImage" class="card-img img-fluid" alt="album picture">                      
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>                        
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div *ngIf="type == 'album'" class="card border-danger">
+                <div class="row no-gutters" >
+                  <div class="col-md-4">
+                      <img [src]="item.images | noImage" class="card-img img-fluid" alt="album picture">                      
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.release_date.substring(0,4) }}</p>                        
+                      </div>
+                  </div>
+                </div>
+            </div>            
+  </div>
+</div>
+
+

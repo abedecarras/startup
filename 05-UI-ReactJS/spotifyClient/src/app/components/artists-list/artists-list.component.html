@@ -1,0 +1,19 @@
+<app-nav-bar></app-nav-bar>
+<app-search-nav-bar></app-search-nav-bar>
+
+<div class="container">
+  <h1>Artists</h1>
+  <p>You are currently searching: "{{ word }}"</p>
+
+  <app-search-bar [placeholder]="'Searh for your favorite artist'"></app-search-bar>
+
+  <div>
+    <a routerLink="/">Home</a> > Artists
+  </div>
+
+  <hr>
+  
+    <app-cards [items]='artists' [type]='type'></app-cards>
+
+</div>
+

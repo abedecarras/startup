@@ -1,0 +1,25 @@
+.btn-star {
+    background: none;
+    border: none;
+    float: right;
+}
+
+.star:hover {
+    color: #000;
+}
+
+.selected {
+    color: #000 !important;    
+}
+
+.star {
+    color: #e0e0e0;
+}
+
+iframe {
+    display: none;
+}
+
+.playing {
+    display: block;
+}

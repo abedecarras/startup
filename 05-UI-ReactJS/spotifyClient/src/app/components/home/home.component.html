@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+
+  <h4 class="mt-4">Welcome to</h4>
+
+  <h1>Spotisearch</h1>
+
+  <p class="mt-4">Search your favourite songs over Spotify, just enter an artist's name in the following search box and enjoy!</p>
+
+  <app-search-bar [placeholder]="'Type the name of your favorite artist'"></app-search-bar>
+  
+  
+
+  <h3 class="mb-5">Favorite Songs</h3>
+
+  <app-cards [items]="favoritesSongs" [type]="type"></app-cards>
+
+</div>
+
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+  <h3>Error</h3>
+  <p>
+    {{ mensajeError }}
+  </p>
+</div>
